@@ -20,12 +20,55 @@ npm run build --report
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-# 初始化项目
+#### 项目设计（project design）
+ 
+```bash
+# init 
 vue init webpack vue-m-cqssc
 cd vue-m-cqssc && npm install
 
-# 添加git仓库
+# add to git repository
 git init
 git add -A
 git commit -m "init project"
-git 
+git remote add origin https://github.com/gnoixs/vue-m-cqssc.git
+git push -u origin master
+
+# run project
+npm run dev
+
+# package into production environment
+npm run build
+```
+
+
+#### 项目结构（project structures）
+```bash
+[vue-m-cqssc]
+      ├── build
+      ├── configs
+      ├── node_modules
+      ├── src
+      │    ├── api           // interface from backend
+      │    ├── base          // base components
+      │    ├── assets        // common static rosource
+      │    │    ├── fonts       // fonts files
+      │    │    ├── images      // images files
+      │    │    ├── js          // javascript files
+      │    │    └── styles      // css files
+      │    ├── components    // pages
+      │    ├── router        // routers
+      │    ├── stroe         // vuex
+      │    ├── App.vue       // App component
+      │    └── main.js       // entry
+      ├── static
+      ├── .babelrc
+      ├── .editorconfig
+      ├── .gitignore
+      ├── .postcssrc.js
+      ├── index.html
+      ├── package.json
+      └── README.md
+```
+
+####
