@@ -1,0 +1,14 @@
+
+1.原生事件函数必须是on开头，并且是驼峰写法: onChange()
+
+2.子组件向父组件传值必须是event开头: event-show
+
+3.父组建接收子组建emit的事件必须是onEvent开头，并以驼峰标识: onEventChange()
+
+4.属性以中划线标识：data-navs
+
+5.组件引用需要用首字母大写的形式: MyHeader
+
+
+
+
