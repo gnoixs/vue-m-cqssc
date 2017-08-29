@@ -5,9 +5,13 @@
       @event-more="onEventMore"
       @event-menu="onEventMenu">
     </i-header>
+    <!-- 历史记录 -->
+    <i-history :showHistory="showHistory">
+
+    </i-history>
 
     <!-- 计时显示 -->
-    <i-timer-bar>
+    <i-timer-bar :showHistory="showHistory" @event-history="onEventHistory">
 
     </i-timer-bar>
     <!-- 右侧显示更多组件-->
@@ -26,10 +30,11 @@
 </template>
 
 <script>
-  import IHeader from "./iHeader";
-  import IMore from "./iMore";
-  import iMenu from "./iMenu";
-  import iTimerBar from './iTimerBar'
+  import IHeader from "./iHeader"
+  import IMore from "./iMore"
+  import IMenu from "./iMenu"
+  import ITimerBar from './iTimerBar'
+  import IHistory from './iHistory'
 
   import menus from "@/assets/js/menus.json"
 
@@ -37,18 +42,23 @@
     components: {
       IHeader,
       IMore,
-      iMenu,
-      iTimerBar
+      IMenu,
+      ITimerBar,
+      IHistory
     },
     name: 'pick',
     data () {
       return {
         flag_more: false,   // 右侧框
         flag_menu: false,    // 下拉菜单
-        data_more: menus    // 右侧框数据
+        data_more: menus,    // 右侧框数据
+        showHistory: false
       }
     },
     methods: {
+      onEventHistory(){
+        this.showHistory = !this.showHistory;
+      },
       onEventMore(){
         this.flag_more = !this.flag_more;
       },
