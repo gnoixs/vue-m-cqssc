@@ -65,7 +65,8 @@
     background: $color-bg-header
     position: fixed
     box-sizing: border-box
-    box-shadow: 2px 2px 5px 0px #29b79f
+    box-shadow: 2px 2px 1px 0px #29b79f
+    z-index: 1
     h1
       text-align: center
       width: $design-width + px

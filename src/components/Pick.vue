@@ -29,6 +29,7 @@
   import IHeader from "./iHeader";
   import IMore from "./iMore";
   import iMenu from "./iMenu";
+  import iTimerBar from './iTimerBar'
 
   import menus from "@/assets/js/menus.json"
 
@@ -36,7 +37,8 @@
     components: {
       IHeader,
       IMore,
-      iMenu
+      iMenu,
+      iTimerBar
     },
     name: 'pick',
     data () {
